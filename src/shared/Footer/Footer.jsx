@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 w-10/12 mx-auto">
             <footer className="footer p-10">
                 <div>
-                    <span className="text-5xl font-extrabold mb-4">Play Land</span>
+                    <span className="text-5xl font-extrabold mb-4 text-black">Play Land</span>
                     <img className="h-28 mx-auto" src={logo} alt="" />
                 </div>
                 <div>
