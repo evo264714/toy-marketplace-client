@@ -1,0 +1,62 @@
+[
+    {
+      "pictureURL": "https://example.com/lego-city-set.jpg",
+      "toyName": "Lego City Police Station",
+      "price": 49.99,
+      "rating": 4.5,
+      "sellerName": "BrickWorld",
+      "subcategoryName": "Lego City",
+      "sellerEmail": "info@brickworld.com",
+      "description": "The Lego City Police Station set includes a police station building, police vehicles, and minifigures. With its detailed design and interactive features, this set provides endless hours of imaginative play for aspiring young officers. Catch the criminals and maintain law and order in Lego City! Suitable for ages 6 and up."
+    },
+    {
+      "pictureURL": "https://example.com/lego-architecture-set.jpg",
+      "toyName": "Lego Architecture Statue of Liberty",
+      "price": 59.99,
+      "rating": 4.8,
+      "sellerName": "BrickMaster",
+      "subcategoryName": "Lego Architecture",
+      "sellerEmail": "sales@brickmaster.com",
+      "description": "Recreate the iconic Statue of Liberty with the Lego Architecture set. This highly detailed model captures the essence of the famous landmark, featuring realistic architectural elements. It's a great gift for architecture enthusiasts and Lego fans alike. Suitable for ages 12 and up."
+    },
+    {
+      "pictureURL": "https://example.com/lego-cars-set.jpg",
+      "toyName": "Lego Cars Speed Champions",
+      "price": 29.99,
+      "rating": 4.2,
+      "sellerName": "BrickSpeed",
+      "subcategoryName": "Lego Cars",
+      "sellerEmail": "support@brickspeed.com",
+      "description": "Experience the thrill of high-speed racing with the Lego Cars Speed Champions set. Build and customize your own race cars, complete with minifigure drivers. Compete against friends or create your own championship. Get ready for the ultimate Lego racing adventure! Suitable for ages 7 and up."
+    },
+    {
+      "pictureURL": "https://example.com/lego-city-space-set.jpg",
+      "toyName": "Lego City Space Station",
+      "price": 89.99,
+      "rating": 4.7,
+      "sellerName": "GalaxyBricks",
+      "subcategoryName": "Lego City",
+      "sellerEmail": "info@galaxybricks.com",
+      "description": "Embark on an interstellar journey with the Lego City Space Station set. Explore outer space, conduct experiments, and live like a real astronaut. This set features a modular space station, spacesuits, and astronaut minifigures. Let your imagination soar beyond the stars! Suitable for ages 8 and up."
+    },
+    {
+      "pictureURL": "https://example.com/lego-cars-rally-set.jpg",
+      "toyName": "Lego Cars Rally Racing",
+      "price": 34.99,
+      "rating": 4.4,
+      "sellerName": "SpeedyBricks",
+      "subcategoryName": "Lego Cars",
+      "sellerEmail": "info@speedybricks.com",
+      "description": "Get ready for thrilling off-road adventures with the Lego Cars Rally Racing set. Construct powerful rally cars and navigate challenging terrains. Race against friends or stage your own rally championship. This set includes ramps, obstacles, and minifigures to create exciting race scenarios. Suitable for ages 8 and up."
+    },
+    {
+      "pictureURL": "https://example.com/lego-architecture-new-york-set.jpg",
+      "toyName": "Lego Architecture New York City",
+      "price": 79.99,
+      "rating": 4.9,
+      "sellerName": "MetroBricks",
+      "subcategoryName": "Lego Architecture",
+      "sellerEmail": "sales@metrobricks.com",
+      "description": "Celebrate the grandeur of New York City with the Lego Architecture New York City set. Build famous landmarks like the Statue of Liberty, Empire State Building, and Times Square. This detailed set captures the essence of the bustling metropolis. Perfect for display or as a gift for architecture enthusiasts. Suitable for ages 12 and up."
+    }
+  ]
