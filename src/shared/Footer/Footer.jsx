@@ -21,7 +21,7 @@ const Footer = () => {
                     <h4 className="footer-title text-2xl font-bold text-white">@COPYRIGHT 2023</h4>
                 </div>
                 <div>
-                    <span className="text-white">Our Socials </span>
+                    <span className="text-white font-bold text-xl">Our Socials </span>
                     <div className="grid grid-flow-col gap-4">
                         <a href="https://www.skype.com/"><FaSkype className="text-3xl footer-title text-white"/></a>
                         <a href="https://www.facebook.com/"><FaFacebook className="text-3xl footer-title text-white"/></a>
