@@ -50,7 +50,6 @@ const AddAToy = () => {
                         className="text-input"
                         value={user?.email}
                         {...register("sellerEmail")}
-                        placeholder="Email of the Seller"
                         type="email"
                     />
 

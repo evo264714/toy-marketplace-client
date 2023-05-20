@@ -17,6 +17,7 @@ import AuthProvider from './providers/AuthProvider';
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 import ToyDetails from './shared/ToyDetails/ToyDetails';
 
+
 const router = createBrowserRouter([
   {
     path: "/",

@@ -4,10 +4,12 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../../providers/AuthProvider";
 import { signInWithPopup } from 'firebase/auth';
 import { Link } from 'react-router-dom';
+import useTitle from '../../../hooks/useTitle';
 
 const LogIn = () => {
     const {signIn, googleProvider, auth} = useContext(AuthContext);
     const [error, setError] = useState('');
+    useTitle('Login')
     // const navigate = useNavigate();
     // const location = useLocation();
     // const from = location.state?.from?.pathname || '/';
