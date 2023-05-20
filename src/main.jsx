@@ -14,11 +14,13 @@ import AddAToy from './pages/AddAToy/AddAToy';
 import LogIn from './pages/LogIn/LogIn/LogIn';
 import Registration from './pages/LogIn/Registration/Registration';
 import AuthProvider from './providers/AuthProvider';
+import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement: <NotFoundPage></NotFoundPage>,
     children: [
 
       {

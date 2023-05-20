@@ -66,7 +66,7 @@ const Blogs = () => {
                 </div>
             </div>
             <div className="border-solid border-2 border-indigo-600 rounded-xl my-4 p-10">
-                <h2 className="text-3xl font-bold mb-2">What is express js? What is Nest JS </h2>
+                <h2 className="text-3xl font-bold mb-2">3. What is express js? What is Nest JS </h2>
                 <div className="font-semibold">
                     <p>
                         <span className="font-extrabold">Answer: </span>
@@ -78,7 +78,7 @@ const Blogs = () => {
                 </div>
             </div>
             <div className="border-solid border-2 border-indigo-600 rounded-xl my-4 p-10">
-                <h2 className="text-3xl font-bold mb-2">What is MongoDB aggregate and how does it work</h2>
+                <h2 className="text-3xl font-bold mb-2">4. What is MongoDB aggregate and how does it work</h2>
                 <div className="font-semibold">
                     <span className="font-extrabold">Answer:</span>
                     <p>In MongoDB, the aggregate framework is a powerful tool for performing advanced data aggregation operations. It allows you to process and transform data in various ways, including grouping, filtering, sorting, joining, and computing aggregations on the data stored in MongoDB collections. The aggregate framework operates on a collection of documents and returns computed results based on the specified operations.

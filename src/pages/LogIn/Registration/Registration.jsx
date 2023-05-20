@@ -1,26 +1,41 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
+import { updateProfile } from "firebase/auth";
 
 const Registration = () => {
 
-    const { createUser } = useContext(AuthContext);
+    const { createUser, auth } = useContext(AuthContext);
+    const [error, setError] = useState('');
+    const [success, setSuccess] = useState('');
 
     const handleRegistration = event => {
         event.preventDefault();
+        setSuccess('')
         const form = event.target;
         const name = form.name.value;
         const email = form.email.value;
         const password = form.password.value;
         const photo = form.photo.value;
         console.log(name, email, password, photo);
+
         createUser(email, password) 
         .then(result =>{
             const user = result.user;
             console.log(user);
+            updateProfile(auth.currentUser,{
+                displayName: name, photoURL: photo
+            })
+            .then()
+            .catch(error =>{
+                console.log(error);
+            })
+            setError('')
+            form.reset();
+            setSuccess('Successfully Registered')
         })
         .catch(error =>{
-            console.log(error);
+            setError(error.message);
         })
     }
     return (
@@ -74,7 +89,11 @@ const Registration = () => {
                             value='Register'
                             className="w-full py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
                         />
-
+                        
+                        <label>
+                            <span className="text-red-600">{error}</span>
+                            <span className="text-green-600">{success}</span>
+                        </label>
 
                         <p className="mt-4">Already Have An Account? Please Login
 

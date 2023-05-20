@@ -1,10 +1,16 @@
-import { Link } from "react-router-dom";
+// import { Link, useLocation, useNavigate } from "react-router-dom";
 import loginIMG from '../../../assets/login.jpg'
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../../providers/AuthProvider";
+import { signInWithPopup } from 'firebase/auth';
+import { Link } from 'react-router-dom';
 
 const LogIn = () => {
-    const {signIn} = useContext(AuthContext)
+    const {signIn, googleProvider, auth} = useContext(AuthContext);
+    const [error, setError] = useState('');
+    // const navigate = useNavigate();
+    // const location = useLocation();
+    // const from = location.state?.from?.pathname || '/';
     const handleLogin = event =>{
         event.preventDefault();
 
@@ -16,8 +22,22 @@ const LogIn = () => {
         .then(result =>{
             const user = result.user;
             console.log(user);
+            setError('');
+            // navigate(from, {replace: true})
         })
-        .catch(error => console.log(error))
+        .catch(error => setError(error.message))
+    }
+    const handleGoogleSignIn = () =>{
+        signInWithPopup(auth,googleProvider)
+        .then(result =>{
+            const user = result.user;
+            console.log(user);
+            setError('');
+
+        })
+        .catch(error =>{
+            console.log(error);
+        })
     }
     return (
         <div className="flex items-center justify-center h-screen">
@@ -47,8 +67,10 @@ const LogIn = () => {
                         <input
                             type="submit"
                             value="Login"
-                            className="w-full py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+                            className="w-full py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 mb-4"
                         />
+                        <button onClick={handleGoogleSignIn} className="w-full py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">Login With Google</button>
+                        <span>{error}</span>
                             
                         
                         <p className="mt-4">New to Play Land? Sign Up <Link 
