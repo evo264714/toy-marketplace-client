@@ -26,7 +26,9 @@ const Registration = () => {
             updateProfile(auth.currentUser,{
                 displayName: name, photoURL: photo
             })
-            .then()
+            .then(() =>{
+                
+            })
             .catch(error =>{
                 console.log(error);
             })

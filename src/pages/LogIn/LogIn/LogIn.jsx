@@ -28,15 +28,17 @@ const LogIn = () => {
         .catch(error => setError(error.message))
     }
     const handleGoogleSignIn = () =>{
+        setError('');
         signInWithPopup(auth,googleProvider)
         .then(result =>{
+            
             const user = result.user;
             console.log(user);
             setError('');
 
         })
         .catch(error =>{
-            console.log(error);
+            console.log(error.message);
         })
     }
     return (
@@ -70,7 +72,7 @@ const LogIn = () => {
                             className="w-full py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 mb-4"
                         />
                         <button onClick={handleGoogleSignIn} className="w-full py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">Login With Google</button>
-                        <span>{error}</span>
+                        <span className='text-red-600'>{error}</span>
                             
                         
                         <p className="mt-4">New to Play Land? Sign Up <Link 

@@ -1,9 +1,14 @@
+import ToyCard from "../../ToyCard/ToyCard";
 
-const LegoCity = ({legoCityCategory}) => {
-    console.log(legoCityCategory);
+
+const LegoCity = ({toys}) => {
+    console.log(toys);
+
     return (
-        <div>
-            <h2>Lego city component</h2>
+        <div className="grid grid-cols-2">
+            {
+                toys.map(toy => <ToyCard toy={toy} key={toy._id}></ToyCard>)
+            }
         </div>
     );
 };
