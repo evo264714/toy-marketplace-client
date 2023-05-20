@@ -5,25 +5,25 @@ import LegoCity from './../LegoCity/LegoCity';
 
 const ShopByCategory = () => {
     const [toys, setToys] = useState([])
-    const [categoryName, setCategoryName] = useState('Lego City');
+    const [activeName, setActiveName] = useState('Lego City');
     // console.log(toys);
 
-    const handleLegoCity = name => {
-        setCategoryName(name);
+    const handleTab = name => {
+        setActiveName(name);
     }
     useEffect(() => {
-        fetch(`http://localhost:5000/toys?category=${categoryName}`)
+        fetch(`http://localhost:5000/toys?category=${activeName}`)
             .then(res => res.json())
             .then(data => setToys(data))
-    }, [categoryName])
+    }, [activeName])
 
 
     return (
         <Tabs>
             <TabList className='text-center'>
-                <Tab onClick={() => handleLegoCity('Lego City')}>Lego City</Tab>
-                <Tab onClick={() => handleLegoCity('Lego Architecture')}>Lego Architecture</Tab>
-                <Tab onClick={() => handleLegoCity('Lego Cars')}>Lego Cars</Tab>
+                <Tab onClick={() => handleTab('Lego City')}>Lego City</Tab>
+                <Tab onClick={() => handleTab('Lego Architecture')}>Lego Architecture</Tab>
+                <Tab onClick={() => handleTab('Lego Cars')}>Lego Cars</Tab>
             </TabList>
 
             <div className='text-center'>

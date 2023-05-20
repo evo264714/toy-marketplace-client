@@ -34,7 +34,7 @@ const LogIn = () => {
             
             const user = result.user;
             console.log(user);
-            setError('');
+            
 
         })
         .catch(error =>{

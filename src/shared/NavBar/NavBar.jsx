@@ -23,11 +23,11 @@ const NavBar = () => {
                     <Link to='/' className="btn btn-outline btn-warning text-xl font-semibold mr-1">Home</Link>
                     <Link to='/allToys' className="btn btn-outline btn-warning text-xl font-semibold mr-1">All Toys</Link>
                     {user && <Link to='/myToys' className="btn btn-outline btn-warning text-xl font-semibold mr-1">My Toys</Link>}
-                    {user && <Link to='/addToys' className="btn btn-outline btn-warning text-xl font-semibold mr-1">Add A Toy</Link>}
+                    {user && <Link to='/addToy' className="btn btn-outline btn-warning text-xl font-semibold mr-1">Add A Toy</Link>}
                     <Link to='/blogs' className="btn btn-outline btn-warning text-xl font-semibold mr-2">Blogs</Link>
                 </div>
                 <div className=''>
-                {user && <img className='w-10 rounded-full mr-2' title={user.displayName} src={user.photoURL} />}
+                {user && <img className='w-10 rounded-full mr-2' title={user?.displayName} src={user?.photoURL} />}
 
                 {user ?
 

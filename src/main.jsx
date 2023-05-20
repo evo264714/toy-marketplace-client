@@ -15,6 +15,7 @@ import LogIn from './pages/LogIn/LogIn/LogIn';
 import Registration from './pages/LogIn/Registration/Registration';
 import AuthProvider from './providers/AuthProvider';
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
+import ToyDetails from './shared/ToyDetails/ToyDetails';
 
 const router = createBrowserRouter([
   {
@@ -40,7 +41,7 @@ const router = createBrowserRouter([
         element: <MyToys></MyToys>
       },
       {
-        path: 'addToys',
+        path: 'addToy',
         element: <AddAToy></AddAToy>
       },
       {
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
       {
         path: 'registration',
         element: <Registration></Registration>
+      },
+      {
+        path: 'toyDetails',
+        element: <ToyDetails></ToyDetails>
       }
 
     ]
