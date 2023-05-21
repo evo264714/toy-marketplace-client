@@ -22,7 +22,7 @@ const MyToys = () => {
     }
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myToys/${user?.email}?sort=${sortValue}`)
+        fetch(`https://toy-marketplace-server-mu-ten.vercel.app/myToys/${user?.email}?sort=${sortValue}`)
             .then(res => res.json())
             .then(data => {
                 setMyToys(data);
@@ -62,14 +62,14 @@ const MyToys = () => {
 
     return (
         <>
-            <div>
-                <h2>Sort by</h2>
-                {/* <form onSubmit={handleSubmit(onSubmit)}> */}
+            <div className="flex items-center justify-center">
+                <h2 className="text-2xl font bold text-accent mr-2">Sort by</h2>
+               
                 <select onChange={(e) => onSelectChange(e)} className="text-input" name="sortData">
                     <option value="1">High to low</option>
                     <option value="-1">Low to high</option>
                 </select>
-                {/* </form> */}
+                
             </div>
             <div>
                 {

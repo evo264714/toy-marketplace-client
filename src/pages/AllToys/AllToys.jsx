@@ -10,7 +10,7 @@ const AllToys = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/allToys?toyName=${searchTxt}`)
+        fetch(`https://toy-marketplace-server-mu-ten.vercel.app/allToys?toyName=${searchTxt}`)
             .then(res => res.json())
             .then(result => {
                 setToys(result);
@@ -22,20 +22,22 @@ const AllToys = () => {
         setSearchTxt(searchStr);
     };
 
-    
+
     return (
         <div>
-            <form onSubmit={handleSubmit(handleSearch)}>
-                <input
-                    className="text-input"
-                    {...register("searchStr")}
-                    placeholder="Search"
-                    onSubmit={handleSearch}
+            <div className="flex justify-center">
+                <form onSubmit={handleSubmit(handleSearch)}>
+                    <input
+                        className="text-input"
+                        {...register("searchStr")}
+                        placeholder="Search"
+                        onSubmit={handleSearch}
 
-                />
-                 <input value="Add Toy" type="submit" className="btn btn-accent w-50 mx-auto mt-4" />
-       
-            </form>
+                    />
+                    <input value="Search" type="submit" className="btn btn-accent w-40 h-16 mx-auto mt-4" />
+
+                </form>
+            </div>
 
             {
 
