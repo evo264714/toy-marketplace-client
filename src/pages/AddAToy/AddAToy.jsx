@@ -9,7 +9,7 @@ const AddAToy = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
         console.log(data)
-        fetch('http://localhost:5000/addToy', {
+        fetch('https://toy-marketplace-server-mu-ten.vercel.app/addToy', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

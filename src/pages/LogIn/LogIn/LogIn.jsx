@@ -1,4 +1,4 @@
-// import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import loginIMG from '../../../assets/login.jpg'
 import { useContext, useState } from "react";
 import { AuthContext } from "../../../providers/AuthProvider";
@@ -10,9 +10,9 @@ const LogIn = () => {
     const {signIn, googleProvider, auth} = useContext(AuthContext);
     const [error, setError] = useState('');
     useTitle('Login')
-    // const navigate = useNavigate();
-    // const location = useLocation();
-    // const from = location.state?.from?.pathname || '/';
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
     const handleLogin = event =>{
         event.preventDefault();
 
@@ -25,7 +25,7 @@ const LogIn = () => {
             const user = result.user;
             console.log(user);
             setError('');
-            // navigate(from, {replace: true})
+            navigate(from, {replace: true})
         })
         .catch(error => setError(error.message))
     }

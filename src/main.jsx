@@ -17,6 +17,7 @@ import AuthProvider from './providers/AuthProvider';
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 import UpdateToys from './pages/UpdateToys/UpdateToys';
 import ToyDetails from './shared/ToyDetails/ToyDetails';
+import PrivateRoute from './routes/PrivateRoute';
 
 
 const router = createBrowserRouter([
@@ -58,12 +59,12 @@ const router = createBrowserRouter([
       {
         path: 'updateToys/:id',
         element: <UpdateToys></UpdateToys>,
-        loader: ({params}) =>fetch(`http://localhost:5000/updateToys/${params.id}`)
+        loader: ({params}) =>fetch(`https://toy-marketplace-server-mu-ten.vercel.app/updateToys/${params.id}`)
       },
       {
         path: 'toyDetails/:id', 
-        element: <ToyDetails></ToyDetails>,
-        loader: ({params}) => fetch(`http://localhost:5000/updateToys/${params.id}`)
+        element:<PrivateRoute> <ToyDetails></ToyDetails>,</PrivateRoute>,
+        loader: ({params}) => fetch(`https://toy-marketplace-server-mu-ten.vercel.app/updateToys/${params.id}`)
       }
 
     ]

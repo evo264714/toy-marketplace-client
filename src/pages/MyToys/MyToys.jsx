@@ -8,7 +8,7 @@ const MyToys = () => {
     const [myToys, setMyToys] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myToys/${user?.email}`)
+        fetch(`https://toy-marketplace-server-mu-ten.vercel.app/myToys/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 setMyToys(data);
@@ -26,7 +26,7 @@ const MyToys = () => {
           cancelButtonText: 'Cancel'
         }).then(result => { // Use the result from Swal.fire()
           if (result.isConfirmed) { // Check if the user confirmed
-            fetch(`http://localhost:5000/myToys/${id}`, {
+            fetch(`https://toy-marketplace-server-mu-ten.vercel.app/myToys/${id}`, {
               method: 'DELETE'
             })
               .then(res => res.json())

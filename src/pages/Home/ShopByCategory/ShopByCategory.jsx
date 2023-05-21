@@ -12,7 +12,7 @@ const ShopByCategory = () => {
         setActiveName(name);
     }
     useEffect(() => {
-        fetch(`http://localhost:5000/toys?category=${activeName}`)
+        fetch(`https://toy-marketplace-server-mu-ten.vercel.app/toys?category=${activeName}`)
             .then(res => res.json())
             .then(data => setToys(data))
     }, [activeName])

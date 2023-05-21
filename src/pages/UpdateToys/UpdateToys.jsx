@@ -10,7 +10,7 @@ const UpdateToys = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onUpdate = data => {
         console.log(data)
-        fetch(`http://localhost:5000/updateToys/${_id}`, {
+        fetch(`https://toy-marketplace-server-mu-ten.vercel.app/updateToys/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
