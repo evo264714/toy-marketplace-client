@@ -13,6 +13,7 @@ const LogIn = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
+    console.log(from);
     const handleLogin = event =>{
         event.preventDefault();
 
@@ -36,7 +37,7 @@ const LogIn = () => {
             
             const user = result.user;
             console.log(user);
-            
+            navigate(from, {replace: true})
 
         })
         .catch(error =>{

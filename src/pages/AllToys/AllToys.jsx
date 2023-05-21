@@ -1,50 +1,54 @@
 import { useEffect, useState } from "react";
 import Toy from "../Toy/Toy";
+import { useForm } from "react-hook-form";
 
 const AllToys = () => {
 
 
     const [toys, setToys] = useState([]);
-    const [searchText, setSearchText] = useState(''); 
-    console.log(searchText);
+    const [searchTxt, setSearchTxt] = useState('')
+    const { register, handleSubmit, formState: { errors } } = useForm();
 
     useEffect(() => {
-        fetch('https://toy-marketplace-server-mu-ten.vercel.app/allToys')
+        fetch(`http://localhost:5000/allToys?toyName=${searchTxt}`)
             .then(res => res.json())
             .then(result => {
                 setToys(result);
             })
-    }, [])
+    }, [searchTxt])
 
-    const handleSearch = () =>{
-        fetch(`https://toy-marketplace-server-mu-ten.vercel.app/toySearchByName/${searchText}`)
-        .then(res => res.json())
-      .then((data) => {
-        setToys(data);
-      });
-  };
-        return (
-            <div>
-                <form className="text-center my-10 ">
-                    <input onChange={(e) =>setSearchText(e.target.value)} className="border border-warning p-4 rounded-s-xl"
-                        type="text"
-                        placeholder="Search..."
-                    />
-                    <button onClick={handleSearch} className="rounded-e-xl bg-warning p-4" type="submit">Search</button>
-                </form>
-
-                {
-                    
-                    toys.map(toy => <Toy
-                        key={toy._id}
-                        toy={toy}
-                    >
-
-                    </Toy>)
-                }
-
-            </div>
-        );
+    const handleSearch = (data) => {
+        const searchStr = data.searchStr
+        setSearchTxt(searchStr);
     };
 
-    export default AllToys;
+    
+    return (
+        <div>
+            <form onSubmit={handleSubmit(handleSearch)}>
+                <input
+                    className="text-input"
+                    {...register("searchStr")}
+                    placeholder="Search"
+                    onSubmit={handleSearch}
+
+                />
+                 <input value="Add Toy" type="submit" className="btn btn-accent w-50 mx-auto mt-4" />
+       
+            </form>
+
+            {
+
+                toys.map(toy => <Toy
+                    key={toy._id}
+                    toy={toy}
+                >
+
+                </Toy>)
+            }
+
+        </div>
+    );
+};
+
+export default AllToys;
