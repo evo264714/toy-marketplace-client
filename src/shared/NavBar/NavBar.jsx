@@ -13,11 +13,11 @@ const NavBar = () => {
         .catch(error =>console.log(error))
     }
     return (
-        <div className="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 w-10/12 mx-auto">
+        <div className="bg-gradient-to-r from-black to-blue-900 w-10/12 mx-auto">
             <div className="navbar flex justify-between">
                 <div className="">
                     <img className="h-20 ml-3" src={logo} alt="" />
-                    <h2 className="text-3xl font-bold text-black ml-3 logo-text">Play Land</h2>
+                    <h2 className="text-3xl font-bold text-warning ml-3 logo-text">Play Land</h2>
                 </div>
                 <div className="">
                     <Link to='/' className="btn btn-outline btn-warning text-xl font-semibold mr-1">Home</Link>

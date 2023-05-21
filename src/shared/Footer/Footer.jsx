@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         
         
-        <div className="bg-black w-10/12 mx-auto">
+        <div className="bg-blue-900 w-10/12 mx-auto">
             <footer className="footer p-10">
                 <div>
                     <span className="text-5xl font-extrabold mb-4 text-white">Play Land</span>

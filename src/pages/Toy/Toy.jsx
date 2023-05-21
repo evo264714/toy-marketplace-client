@@ -1,7 +1,9 @@
 import { useContext } from "react";
 import { AuthContext } from './../../providers/AuthProvider';
+import { Link } from "react-router-dom";
 
 const Toy = ({ toy }) => {
+    const {_id} = toy
     const {loading} = useContext(AuthContext)
     if (loading) {
         return <progress className="progress progress-success w-56" value="0" max="100"></progress>
@@ -33,7 +35,7 @@ const Toy = ({ toy }) => {
                         <td className="flex items-center justify-center text-orange-500 font-semibold">{subcategoryName}</td>
                         <td className="flex items-center justify-center text-orange-500 font-semibold">{price}</td>
                         <td className="flex items-center justify-center text-orange-500 font-semibold">{availableQuantity}</td>
-                        <td className="flex items-center justify-center text-orange-500 font-semibold"><button className="btn btn-outline btn-accent">View Details</button></td>
+                        <td className="flex items-center justify-center text-orange-500 font-semibold"><Link to={`/toyDetails/${_id}`} className="btn btn-outline btn-accent">View Details</Link></td>
                     </tr>
 
 

@@ -16,7 +16,7 @@ const GallerySection = () => {
         <div className="flex items-center justify-center py-8 w-10/12 mx-auto">
       <div className="container mx-auto flex">
         <div className="flex-1 my-auto">
-          <div className="max-w-md p-8 bg-white rounded-lg shadow-lg">
+          <div className="max-w-md p-8 bg-warning rounded-lg shadow-lg">
             <h2 className="text-3xl font-semibold mb-4">Gallery</h2>
             <p className="text-gray-700 mb-8">
               Welcome to our gallery. Take a look at some of our products.

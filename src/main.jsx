@@ -15,6 +15,7 @@ import LogIn from './pages/LogIn/LogIn/LogIn';
 import Registration from './pages/LogIn/Registration/Registration';
 import AuthProvider from './providers/AuthProvider';
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
+import UpdateToys from './pages/UpdateToys/UpdateToys';
 import ToyDetails from './shared/ToyDetails/ToyDetails';
 
 
@@ -53,9 +54,16 @@ const router = createBrowserRouter([
         path: 'registration',
         element: <Registration></Registration>
       },
+      
       {
-        path: 'toyDetails',
-        element: <ToyDetails></ToyDetails>
+        path: 'updateToys/:id',
+        element: <UpdateToys></UpdateToys>,
+        loader: ({params}) =>fetch(`http://localhost:5000/updateToys/${params.id}`)
+      },
+      {
+        path: 'toyDetails/:id', 
+        element: <ToyDetails></ToyDetails>,
+        loader: ({params}) => fetch(`http://localhost:5000/updateToys/${params.id}`)
       }
 
     ]

@@ -2,7 +2,7 @@ import ToyCard from "../../ToyCard/ToyCard";
 
 
 const LegoCity = ({toys}) => {
-    console.log(toys);
+    // console.log(toys);
 
     return (
         <div className="grid grid-cols-2">
