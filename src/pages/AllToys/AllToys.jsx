@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Toy from "../Toy/Toy";
 import { useForm } from "react-hook-form";
+import useTitle from "../../hooks/useTitle";
 
 const AllToys = () => {
 
@@ -8,6 +9,7 @@ const AllToys = () => {
     const [toys, setToys] = useState([]);
     const [searchTxt, setSearchTxt] = useState('')
     const { register, handleSubmit, formState: { errors } } = useForm();
+    useTitle('All Toys')
 
     useEffect(() => {
         fetch(`https://toy-marketplace-server-mu-ten.vercel.app/allToys?toyName=${searchTxt}`)

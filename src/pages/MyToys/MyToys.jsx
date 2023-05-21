@@ -3,11 +3,13 @@ import { AuthContext } from "../../providers/AuthProvider";
 import MyToy from "../MyToy/MyToy";
 import Swal from "sweetalert2";
 import { useForm } from "react-hook-form";
+import useTitle from "../../hooks/useTitle";
 
 const MyToys = () => {
     const { user } = useContext(AuthContext)
     const [myToys, setMyToys] = useState([])
-    const [sortValue, setSortValue] = useState(1)
+    const [sortValue, setSortValue] = useState(1);
+    useTitle('My Toys')
 
     const {
         register,

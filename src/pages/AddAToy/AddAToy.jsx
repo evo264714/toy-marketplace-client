@@ -3,10 +3,12 @@ import './AddAToy.css'
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
+import useTitle from "../../hooks/useTitle";
 
 const AddAToy = () => {
     const {user} = useContext(AuthContext)
     const { register, handleSubmit, formState: { errors } } = useForm();
+    useTitle('Add A Toy')
     const onSubmit = data => {
         console.log(data)
         fetch('https://toy-marketplace-server-mu-ten.vercel.app/addToy', {
