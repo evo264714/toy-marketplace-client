@@ -19,7 +19,7 @@ const ShopByCategory = () => {
 
 
     return (
-        <Tabs className='bg-blue-900 w-10/12 mx-auto my-8'>
+        <Tabs className='bg-blue-900 md:w-10/12 mx-auto my-8 data-tab'>
             <TabList className='flex justify-center items-center my-4'style={{ cursor: "pointer" }}>
                 <Tab className='text-warning font-bold text-xl mr-4' onClick={() => handleTab('Lego City')}>Lego City</Tab>
                 <Tab className='text-warning font-bold text-xl mr-4' onClick={() => handleTab('Lego Architecture')}>Lego Architecture</Tab>

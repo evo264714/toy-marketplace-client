@@ -1,0 +1,8 @@
+@media only screen and (max-width: 576px){
+    .gallery{
+        width:100%
+    }
+    .gallery-flex{
+        flex-direction: column;
+    }
+}

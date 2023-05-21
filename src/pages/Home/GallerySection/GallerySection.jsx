@@ -8,14 +8,15 @@ import slide4 from '../../../assets/slide4.jpg';
 import slide5 from '../../../assets/slide5.jpg';
 import slide6 from '../../../assets/slide6.jpg';
 import { FaAngleDoubleRight } from 'react-icons/fa';
+import './GallerySection.css'
 
 SwiperCore.use([Navigation, Pagination]);
 
 
 const GallerySection = () => {
     return (
-        <div className="flex items-center justify-center py-8 w-10/12 mx-auto bg-black my-4">
-      <div className="container mx-auto flex">
+        <div className="flex gallery items-center justify-center py-8 w-10/12 mx-auto bg-black my-4">
+      <div className="container gallery-flex mx-auto flex">
         <div className="flex my-auto mx-auto">
           <div className="mx-auto p-8 bg-blue-900 rounded-lg">
             <h2 className="text-3xl mb-4 text-warning font-bold">Gallery</h2>
