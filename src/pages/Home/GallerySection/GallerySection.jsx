@@ -13,17 +13,18 @@ SwiperCore.use([Navigation, Pagination]);
 
 const GallerySection = () => {
     return (
-        <div className="flex items-center justify-center py-8 w-10/12 mx-auto">
+        <div className="flex items-center justify-center py-8 w-10/12 mx-auto bg-black my-4">
       <div className="container mx-auto flex">
-        <div className="flex-1 my-auto">
-          <div className="max-w-md p-8 bg-warning rounded-lg shadow-lg">
-            <h2 className="text-3xl font-semibold mb-4">Gallery</h2>
-            <p className="text-gray-700 mb-8">
+        <div className="flex my-auto mx-auto">
+          <div className="mx-auto p-8 bg-blue-900 rounded-lg">
+            <h2 className="text-3xl mb-4 text-warning font-bold">Gallery</h2>
+            <p className="text-warning mb-8 font-semibold">
               Welcome to our gallery. Take a look at some of our products.
             </p>
           </div>
         </div>
-        <div className="flex-1">
+        <div className="mx-auto">
+
           <Swiper
             spaceBetween={0}
             slidesPerView={1}

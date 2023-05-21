@@ -20,10 +20,10 @@ const ShopByCategory = () => {
 
     return (
         <Tabs className='bg-blue-900 w-10/12 mx-auto my-8'>
-            <TabList className='text-center 'style={{ cursor: "pointer" }}>
-                <Tab className='text-warning' onClick={() => handleTab('Lego City')}>Lego City</Tab>
-                <Tab className='text-warning' onClick={() => handleTab('Lego Architecture')}>Lego Architecture</Tab>
-                <Tab className='text-warning' onClick={() => handleTab('Lego Cars')}>Lego Cars</Tab>
+            <TabList className='flex justify-center items-center my-4'style={{ cursor: "pointer" }}>
+                <Tab className='text-warning font-bold text-xl mr-4' onClick={() => handleTab('Lego City')}>Lego City</Tab>
+                <Tab className='text-warning font-bold text-xl mr-4' onClick={() => handleTab('Lego Architecture')}>Lego Architecture</Tab>
+                <Tab className='text-warning font-bold text-xl mr-4' onClick={() => handleTab('Lego Cars')}>Lego Cars</Tab>
             </TabList>
 
             <div className='text-center'>

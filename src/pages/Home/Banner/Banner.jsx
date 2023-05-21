@@ -2,7 +2,7 @@ import backgroundImage from '../../../assets/banner.jpg'
 
 const Banner = () => {
     return (
-        <div className="flex bg-blue-900 py-8 w-10/12 mx-auto">
+        <div className="flex bg-black py-8 w-10/12 mx-auto">
             <div className="w-1/2 my-auto">
                 <h1 className="text-warning text-4xl font-bold text-center">
                     Welcome To Play Land

@@ -25,13 +25,13 @@ const ExtraFirstSection = () => {
       ];
     
       return (
-        <section className="py-10 bg-blue-900 w-10/12 mx-auto my-14">
+        <section className="py-10 bg-black w-10/12 mx-auto my-14">
           <div className="container mx-auto ">
-            <h2 className="text-3xl font-semibold text-center mb-8 text-error">Discover More Toys for Kids</h2>
+            <h2 className="text-3xl font-semibold text-center mb-8 text-warning">Discover More Toys for Kids</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 ">
               {toysData.map((toy) => (
                 <Link to={toy.link} key={toy.id}>
-                  <div className="bg-white drop-shadow-lg rounded-lg p-6 flex flex-col items-center transition duration-300 bg-gradient-to-r from-black to-blue-900 ease-in-out hover:bg-blue-100">
+                  <div className=" drop-shadow-lg rounded-lg p-6 flex flex-col items-center transition duration-300 bg-blue-900 ease-in-out hover:bg-blue-100 mx-2">
                     <img src={toy.image} alt={toy.title} className="w-32 h-32 object-cover rounded-full mb-4" />
                     <h3 className="text-xl text-warning font-semibold text-center">{toy.title}</h3>
                     <p className="text-slate-500">{toy.description}</p>
