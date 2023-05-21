@@ -15,7 +15,7 @@ const ToyCard = ({ toy }) => {
             showCancelButton: true,
             confirmButtonColor: "#3085d6",
             cancelButtonColor: "#d33",
-            confirmButtonText: "Delete!",
+            confirmButtonText: "Okay!",
           }).then((result) => {
             if (result.isConfirmed) {
                 navigate(`/toyDetails/${_id}`)
