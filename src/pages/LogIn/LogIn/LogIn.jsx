@@ -72,21 +72,22 @@ const LogIn = () => {
                         <input
                             type="submit"
                             value="Login"
-                            className="w-full py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 mb-4"
+                            className="w-full py-2 mb-4 bg-blue-500 text-white rounded-lg hover:bg-blue-600 "
                         />
-                        <button onClick={handleGoogleSignIn} className="w-full py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">Login With Google</button>
-                        <span className='text-red-600'>{error}</span>
-                            
-                        
-                        <p className="mt-4">New to Play Land? Sign Up <Link 
+                       
+                    </form>
+                    <button onClick={handleGoogleSignIn} className="w-full py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">Login With Google</button>
+                    <p className="mt-4">New to Play Land? Sign Up <Link 
                         
                         to='/registration'
                         className="underline "
                         
                         >Here</Link></p>
-                    </form>
+                    <span className='text-red-600'>{error}</span>
                 </div>
+
             </div>
+            
             <div className="flex-1 ml-8">
                 <div className="flex flex-col items-center space-y-4 h-full text-black text-center">
                     <h1 className="text-4xl font-bold">Welcome Back!</h1>
