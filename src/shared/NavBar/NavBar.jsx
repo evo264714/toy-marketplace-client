@@ -3,12 +3,10 @@ import logo from "../../assets/logo.png";
 import { useContext, useEffect } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import './NavBar.css';
-// import userPNG from "../../assets/user.png"
 
 const NavBar = () => {
     const { user, logOut } = useContext(AuthContext);
     useEffect(() => {
-        // Initialize navbar collapse toggle functionality
         const navbarToggle = document.getElementById('navbar-toggle');
         const navbarCollapse = document.getElementById('navbar-collapse');
 
